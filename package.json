@@ -1,0 +1,26 @@
+{
+  "name": "actual-autocat",
+  "version": "0.1.0",
+  "description": "Auto-categorize Actual Budget transactions with a local LLM (two-stage: group then category)",
+  "type": "module",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "tsx src/index.ts",
+    "dry": "tsx src/index.ts --dry-run",
+    "apply": "tsx src/index.ts --apply",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "smoke": "tsx scripts/smoke-llm.ts && tsx scripts/smoke-tags.ts"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@actual-app/api": "^26.8.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.20.1",
+    "tsx": "^4.23.12",
+    "typescript": "^7.0.2"
+  }
+}
